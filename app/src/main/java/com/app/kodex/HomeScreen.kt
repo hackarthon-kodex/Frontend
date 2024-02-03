@@ -118,7 +118,7 @@ fun HomeScreen(
                     verticalArrangement = Arrangement.Center) {
                     Box(
                         modifier = Modifier
-                            .shadow(elevation = 8.dp, ambientColor = Color(0.0f,0.0f,0.0f,0.12f))
+                            .shadow(elevation = 8.dp, ambientColor = Color(0.0f,0.0f,0.0f,0.06f))
                             .background(Color(0xFFFD4E4E),shape = RoundedCornerShape(12.dp))
                             .fillMaxWidth(0.9f)
                             .height(90.dp)
@@ -134,7 +134,7 @@ fun HomeScreen(
                                 contentDescription = null
                             )
                             Text(
-                                text = "그림 그릴래",
+                                text = "그림 이야기할래",
                                 color = Color.White,
                                 fontStyle = FontStyle(R.font.pretendard),
                                 textAlign = TextAlign.Center,
@@ -145,7 +145,7 @@ fun HomeScreen(
                     }
                     Spacer(modifier = Modifier.height(18.dp))
                     Box(modifier = Modifier
-                        .shadow(elevation = 8.dp, ambientColor = Color(0.0f,0.0f,0.0f,0.12f))
+                        .shadow(elevation = 8.dp, ambientColor = Color(0.0f,0.0f,0.0f,0.06f))
                         .background(Color(0xFFFFB930),shape = RoundedCornerShape(12.dp))
                         .fillMaxWidth(0.9f)
                         .height(90.dp)

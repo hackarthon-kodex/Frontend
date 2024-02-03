@@ -82,7 +82,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
     //for navigation
-    implementation("androidx.navigation:navigation-compose:2.6.0")
+    implementation("androidx.navigation:navigation-compose:2.7.6")
     implementation("io.coil-kt:coil-compose:2.4.0")
 
 
@@ -92,9 +92,19 @@ dependencies {
     kapt ("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
-    implementation("androidx.navigation:navigation-runtime:2.6.0")
+    implementation("androidx.navigation:navigation-runtime:2.7.6")
 
     implementation("com.google.accompanist:accompanist-pager:0.28.0")
     implementation("com.google.accompanist:accompanist-pager-indicators:0.20.1")
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+
+    implementation ("org.pytorch:pytorch_android_lite:2.1.0")
+    implementation ("org.pytorch:pytorch_android_torchvision:1.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
 }

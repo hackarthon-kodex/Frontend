@@ -18,7 +18,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.kodex.R
+import com.app.kodex.ResultViewModel
 import com.app.kodex.ui.component.AppBar
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -28,14 +30,17 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun ResultScreen(){
+fun ResultScreen(
+    viewModel: ResultViewModel = hiltViewModel()
+){
     Scaffold(
         topBar = {
-            AppBar(title = "심리분석 히스토리")
+            AppBar(title = "나의 일기장")
         },
         containerColor = Color.White
     ) {
-        val pages = listOf("#그림 일기","일기")
+        val state= viewModel.getChatState
+        val pages = listOf("#그림 일기","#일기")
         Column(modifier = Modifier.padding(top = it.calculateTopPadding())) {
 
             val pagerState= rememberPagerState()
@@ -54,7 +59,6 @@ fun ResultScreen(){
                         Modifier
                             .pagerTabIndicatorOffset(pagerState, tabPositions = positions)
                             .width((positions[pagerState.currentPage].width * 0.8f))
-
                     )
                 }
             ) {
@@ -78,10 +82,12 @@ fun ResultScreen(){
             }
             HorizontalPager(
                 count = pages.size,
-                state = pagerState) {
+                state = pagerState
+            ) {
                 page -> 
                 when(page){
-                    1-> TexDiaryPage()
+                    0 -> PaintDiaryPage()
+                    1-> TexDiaryPage(text = state.value.result)
                 }
             }
 

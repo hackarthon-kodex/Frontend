@@ -7,14 +7,14 @@ sealed class BottomMenuContent(
     val activeIcon: Int
 ) {
     object draw : BottomMenuContent(
-        "그림 그리기",
+        "그림 이야기",
         "home/draw",
         R.drawable.nav_draw_inactive,
         R.drawable.nav_draw_active
     )
 
     object chat : BottomMenuContent(
-        "이야기 하기",
+        "이야기하기",
         "home/chat",
         R.drawable.nav_chat_inactive,
         R.drawable.nav_chat_active
